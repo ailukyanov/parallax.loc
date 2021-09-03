@@ -1,0 +1,45 @@
+/*------------------------------ <RESET, COMMON PARAMETERS> ------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+
+  &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #000;
+}
+/*------------------------------ </RESET, COMMON PARAMETERS> -----------------------------*/
+
+/*------------------------------ <WRAPPER> ------------------------------*/
+.wrapper {
+  overflow: hidden;
+  opacity: 0;
+  transition: all 1.0s ease 0s;
+
+  &.active {
+    opacity: 1;
+
+    .parallax__wave {
+      opacity: 1;
+      transition: all 1.0s ease 1.0s;
+    }
+
+    .parallax__rope {
+      opacity: 1;
+      transition: all 1.0s ease 1.8s;
+    }
+
+    .parallax__lighthouse {
+      bottom: 130px;
+      transition: all 0.8s ease 2.5s;
+    }
+  }
+}
+/*------------------------------ </WRAPPER> -----------------------------*/
